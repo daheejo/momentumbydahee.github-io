@@ -1,0 +1,16 @@
+h1 {
+    color: cornflowerblue;
+    transition: color .5s ease-in-out;
+}
+
+body {
+    background-color: beige;
+}
+
+.clicked {
+    color: crimson;
+}
+
+.sexy-font {
+    font-family:'Times New Roman', Times, serif;
+}
