@@ -10,18 +10,18 @@ const USERNAME_KEY = "username";
 function LoginSubmit(event) {
     event.preventDefault(); //submit 후 새로고침 막기
     loginForm.classList.add(HIDDEN_CLASS);
-    const username = loginInput.value;
-    localStorage.setItem(USERNAME_KEY, username)
-    showGreetings(username);
+    const usernameTyped = loginInput.value;
+    localStorage.setItem(USERNAME_KEY, usernameTyped)
+    showGreetings(usernameTyped);
     }
 
 function showGreetings(username) {
+    // const username = localStorage.getItem(USERNAME_KEY);
     greeting.innerText = `Hello ${username}!`; //"Hello " + username +"!";
     greeting.classList.remove(HIDDEN_CLASS);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
-
 if (savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASS);
     loginForm.addEventListener("submit", LoginSubmit);
