@@ -14,12 +14,15 @@ function saveTodos() {
 function deleteTodo(event) {
     const li = event.target.parentElement;//target = 클릭된 html element // parentElement를 알아야 어떤 todo의 삭제 버튼인지 앎
     li.remove();
-}
+    toDos = toDos.filter((todo)=>todo.id !== parseInt(li.id)); 
+    saveTodos();
+}   //li.id 는 string이므로 parseInt로 정수형으로 바꿔야함
 
 function paintTodo(newTodo) {
     const li = document.createElement("li");
+    li.id = newTodo.id
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "DELETE";
     button.addEventListener("click",deleteTodo);
@@ -32,8 +35,12 @@ function handleTodoSubmit(event) {
     event.preventDefault();
     const newTodo = todoInput.value; //newTodo에 카피
     todoInput.value = ""; //따라서 newTodo엔 영향 없음. 제출 후 input칸을 빈칸으로 만들기
-    toDos.push(newTodo); //newtodo 생성 시마다 toDos array에 추가
-    paintTodo(newTodo);
+    const newTodoObj = {
+        text:newTodo,
+        id:Date.now() //newTodo마다 랜덤 id 생성
+    }
+    toDos.push(newTodoObj); //newtodo 생성 시마다 toDos array에 추가
+    paintTodo(newTodoObj);
     saveTodos();
 }
 
