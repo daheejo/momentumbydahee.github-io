@@ -4,7 +4,7 @@ const todoList = document.getElementById("todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = []; 
+let toDos = []; //값 추가할 수 있도록 let선언으로 변경
 
 function saveTodos() {
     localStorage.setItem(TODOS_KEY,JSON.stringify(toDos)); // localstorage 데이터를 string화
@@ -43,5 +43,6 @@ const savedTodos = localStorage.getItem(TODOS_KEY);
 console.log(savedTodos);
 if (savedTodos !== null) {
     const parsedTodos = JSON.parse(savedTodos); //string을 js array로 변환 
+    toDos = parsedTodos; //todo 복원
     parsedTodos.forEach(paintTodo); //array에 있는 요소 별로 함수 처리
 }
