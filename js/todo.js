@@ -47,7 +47,6 @@ function handleTodoSubmit(event) {
 todoForm.addEventListener("submit", handleTodoSubmit);
 
 const savedTodos = localStorage.getItem(TODOS_KEY);
-console.log(savedTodos);
 if (savedTodos !== null) {
     const parsedTodos = JSON.parse(savedTodos); //string을 js array로 변환 
     toDos = parsedTodos; //todo 복원
