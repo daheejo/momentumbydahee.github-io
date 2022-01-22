@@ -12,7 +12,7 @@ function GeoSuccess(position) {
             city.innerText = data.name;
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
         });
-
+    }
 function GeoError() {
     alert("Can't find you.")
 }
