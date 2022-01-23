@@ -86,7 +86,7 @@ input::placeholder {
     color: rgb(201, 199, 199);
 }
 
-ul {
+#todo-list {
     overflow: overlay;
     height: 110px;
     display: absolute;
@@ -100,7 +100,7 @@ ul::-webkit-scrollbar {
 }
 
 ul::-webkit-scrollbar-thumb {
-    background-color: hsla(0, 0%, 42%, 0.49);
+    background-color: transparent;
     border-radius: 100px;
 }
 
@@ -142,10 +142,6 @@ button{
     opacity: 60%;
     font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
-}
-
-footer {
-    position: fixed;
     left: 0%;
     bottom: 5%;
     width: 100%;
