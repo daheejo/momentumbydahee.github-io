@@ -88,10 +88,9 @@ input::placeholder {
 
 #todo-list {
     overflow: overlay;
-    height: 110px;
     display: absolute;
     margin-left: 38%;
-    margin-bottom: 17px;
+    /* margin-bottom: 10px; */
     font-family: 'IBMPlexSansKR-Regular';
 }
 
