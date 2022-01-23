@@ -2,7 +2,7 @@
 component */
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @font-face {
@@ -22,11 +22,11 @@ component */
 /*----------------------*/
 
 body{
-    background-color: #2d3436;
     text-align: center;
     color: #ecf0f1;
     padding: 1%;
 }
+
 
 img {
     position:absolute;
@@ -37,8 +37,14 @@ img {
     right:0px;
     bottom:0px;
     z-index: -1;
-    opacity:50%;
+    opacity:60%;
     }
+
+#weather {
+    display: flex;
+    justify-content: right;
+
+}
 
 h2{
     font-size: 80px;
@@ -46,6 +52,15 @@ h2{
     margin-bottom: 0px;
 }
 
+#login-form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* #login-form.hidden {
+    display: none;
+} */
 
 input {
     border: none;
@@ -70,6 +85,7 @@ li{
     font-size: 20px;
     text-align:left;
     color: #ecf0f1;
+
 }
 
 li:before{
@@ -78,6 +94,7 @@ li:before{
     display: inline;
     vertical-align: left;
     padding: 5px;
+    
 }
 
 button{
@@ -97,27 +114,17 @@ button{
 }
 
 #quote {
-
     opacity: 60%;
-    font-size: 30px;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
 }
 
 footer {
     position: fixed;
     left: 0%;
-    bottom: 10%;
+    bottom: 5%;
     width: 100%;
     text-align: center;
     font-family: 'IBMPlexSansKR-Regular';
 }
 
-#weather {
-    display: flex;
-    justify-content: right;
-
-}
-
-#weather span {
-    width: 5%;
-}
