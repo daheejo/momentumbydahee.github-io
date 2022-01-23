@@ -22,8 +22,8 @@ component */
 /*----------------------*/
 
 body{
-    background-color: #73808e;
-    text-shadow: 1px 1px 1px #000;
+    background-color: transparent;
+    text-shadow: 1px 1px 4px rgb(167, 163, 163);
     text-align: center;
     color: white;
     padding: 1%;
@@ -37,10 +37,10 @@ img {
     height:100%;
     left: 0px;
     top: 0px;
-    right:0px;
     bottom:0px;
     z-index: -1;
     opacity:60%;
+    animation: fadeIn 0.5s linear;
 }
 
 #weather {
@@ -80,6 +80,10 @@ input {
     color: white;
     border-bottom: 2px solid #ecf0f1;
     
+}
+
+input::placeholder {
+    color: rgb(201, 199, 199);
 }
 
 ul {
