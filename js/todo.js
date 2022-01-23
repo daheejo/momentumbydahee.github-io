@@ -24,8 +24,10 @@ function paintTodo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "X";
+    button.innerText = "❌";
     button.addEventListener("click",deleteTodo);
+    button.addEventListener("mouseenter",function() {button.style.background = "black";});
+    button.addEventListener("mouseleave",function() {button.style.background = "transparent";})
     li.appendChild(span);
     li.appendChild(button);
     todoList.appendChild(li);
