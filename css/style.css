@@ -23,7 +23,7 @@ component */
 
 body{
     background-color: transparent;
-    text-shadow: 1px 1px 4px rgb(167, 163, 163);
+    text-shadow: 1px 1px 4px rgb(106, 103, 103);
     text-align: center;
     color: white;
     padding: 1%;
@@ -45,9 +45,8 @@ img {
 }
 
 #weather {
-    display: flex;
-    justify-content: right;
-
+    position: fixed;
+    left: 90%
 }
 
 .form-wrapper {
@@ -92,7 +91,7 @@ ul {
     height: 220px;
     display: flex;
     flex-direction: column;
-    margin-left: 38%;
+    margin-left: 39%;
     font-family: 'IBMPlexSansKR-Regular';
     list-style: none;
 }
