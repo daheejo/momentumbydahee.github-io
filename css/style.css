@@ -88,12 +88,11 @@ input::placeholder {
 
 ul {
     overflow: overlay;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 39%;
+    height: 110px;
+    display: absolute;
+    margin-left: 38%;
+    margin-bottom: 17px;
     font-family: 'IBMPlexSansKR-Regular';
-    list-style: none;
 }
 
 ul::-webkit-scrollbar {
