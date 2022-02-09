@@ -1,2 +1,2 @@
-# 모멘텀 클론
+# Make your to-do list!
 https://daheejo.github.io/momentumbydahee.github-io/
